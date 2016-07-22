@@ -1,0 +1,140 @@
+@import '../variables';
+@import '../mixins';
+
+#header {
+  background-color: $dark_background;
+  padding: $main_padding;
+  height: $header_height;
+}
+
+.logo_wrap {
+  height: $logo_size; 
+}
+
+.logo_wrap > img {
+  max-height: 100%; 
+}
+
+.main_search {
+  text-align: center;
+  h1 {
+    color: $light_color;
+    font: 40px 'WalsheimMedium', sans-serif;
+    margin-bottom: $no_gap; 
+  } 
+  h4 {
+    color: $light_text;
+    font: 100 30px 'WalsheimLight', sans-serif;
+      span {
+        color: $theme_color;
+      }
+  }  
+}
+
+.search_input {
+  margin-top: $large_gap;
+  input {
+    width: 50%;
+    height: 40px;
+    border-radius: 18px; 
+  }
+}
+
+#search-input {
+  font: 100 18px 'WalsheimMedium', sans-serif;
+  color: #121c25; 
+}
+
+#custom-search-input{
+  border: solid 1px #E4E4E4;
+  border-radius: 23px;
+  background-color: #fff;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  height: 45px;
+  @media screen and (max-width: $screenS) {
+    width: 100%;
+  }
+  @media (min-width: $screenS + 1) and (max-width: $screenM) {
+    width: 70%;
+  }    
+}
+
+.key-btn {
+  @include titles;
+  font-family: 'WalsheimMedium', sans-serif;
+}
+
+#custom-search-input input{
+  border: 0;
+  box-shadow: none;
+  width: 90%;
+  height: 100%;
+  padding-top: 7px;
+  @media screen and (max-width: $screenS) {
+    width: 80%;
+  }
+}
+
+.input-group {
+  height: 100%;
+}
+
+#custom-search-input button{
+  background: none;
+  box-shadow: none;
+  border: 0;
+  color: #666666;
+  border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+  border: 0;
+  box-shadow: none;
+  border-left: solid 1px #ccc;
+}
+
+.search_wrap {
+  padding: 10px;
+}
+
+#custom-search-input .fa-search{
+  font-size: 18px;
+}
+
+#search-input::-webkit-input-placeholder {
+  color: $light_text;
+  @include secondary-text;
+}
+
+#search-input:-moz-placeholder { /* Firefox 18- */
+  color: $light_text; 
+  @include secondary-text; 
+}
+
+#search-input::-moz-placeholder {  /* Firefox 19+ */
+  color: $light_text;
+  @include secondary-text;  
+}
+
+#search-input:-ms-input-placeholder {  
+  color: $light_text;
+  @include secondary-text;  
+}
+
+.plot {
+  color: $dark_background;
+  @include secondary-text;  
+}
+input:focus {
+    outline:none;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: none!important;
+}
+
+.input-group-btn .btn {
+  cursor: initial;
+}
+

@@ -1,0 +1,11 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import "partials/header";
+@import "templates/tpl_results";
+
+
+body {
+    background-color: $theme_color;   
+}
+

@@ -1,0 +1,51 @@
+@mixin titles {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+@mixin func_btn {
+  border-radius: 5px!important;
+  background-color: white;
+  color: #121c25;
+  font-weight: 500;
+  font-family: WalsheimMedium;
+  margin-right: $primary_right;
+
+}
+
+@mixin good_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@mixin type-style {
+ margin-right: 5px;
+ font-size: 10px;
+}
+
+@mixin align-row {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+@mixin film-title {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: 'WalsheimBold';
+  color: $title_color;
+}
+
+@mixin space-justify {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin secondary-text {
+  text-align: left;
+  font-family: 'WalsheimLight';
+  font-size: 16px;
+}
+

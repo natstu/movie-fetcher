@@ -1,0 +1,90 @@
+<!doctype html>
+    <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>app</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/animate.css">
+        <link rel="stylesheet" href="styles/css/main.css">
+    </head>
+
+    <body ng-app="app">
+        <div id="app" ng-controller="mainController">
+            <header id="header">
+                <!-- logo head -->
+                <div class="logo_head">
+                    <div class="logo_wrap"><img src="assets/logo.png"></div>
+                </div>
+                <!-- main search -->
+                <div class="main_search">
+                    <h1>OMDb</h1>
+                    <h4>The Open <span>Movie</span> Database</h4>
+                        <!-- input focus classes -->
+                        <div id="custom-search-input" ng-class="{ myFocus: focus, myBlur: blur }" ng-init="focused=false" >
+                            <div class="input-group col-md-12"  >
+                                <span class="search_wrap"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                <!-- search model -->
+                                <input id="search-input" ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false;" ng-model="search"  ng-change="lookUpFilm()" type="text" placeholder="Search for anything, right here, right now...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info btn-lg" type="button">
+                                        <span class="key-btn">Search</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+            </header>
+            <!-- results -->
+            <div class="results_wrapper" ng-if="films !== undefined">
+                <!-- sorting header -->
+                <div class="results_head">
+                    <span class="title results">Results</span>
+                    <div class="sort-group">
+                        <span>Sort By:</span>
+                        <!-- sorting options -->
+                        <div class="btn-group" data-toggle="buttons">
+                            <label ng-repeat="option in sortOptions" class="btn {{option =='Title' ? 'active' : ''}}"  for="title-input" ng-click="setSort (option)">
+                                <input id="title-input" type="radio" name="sort-group" value="TITLE" checked="" autocomplete="off"> {{option}}
+                            </label>
+                        </div>
+                    </div>  
+                </div>
+                <!-- display collection of search results -->
+                <ul class="film-list row" >
+                    <li  class="col-md-4 col-sm-4 col-xs-12 film-item wow flipInX" ng-repeat="film in films | orderBy:sort" ng-click="moreInfo(film); focusPlot();" >
+                        <div class="film-box row" >
+                            <div class="general">
+                                <div class="col-sm-4 col-xs-4"><img ng-src="{{ film.Poster=='N/A' ? 'assets/film_placeholder.png' : film.Poster }}"/></div>
+                                <div class="col-sm-8 col-xs-8 col">
+                                    <div class="row type {{film.Type=='movie' ? 'movie' : 'series'}}" ><i class="fa fa-circle" aria-hidden="true"></i><span>{{film.Type}}</span></div>
+                                    <div class="row film-name">{{film.Title}}</div>
+                                    <div class="row year">{{film.Year}}</div>
+                                </div>
+                            </div> 
+                            <!-- film plot displayed on film box click -->
+                            <div class="plot" ng-show="seePlot">{{plot}}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- no results -->
+            <div class="no-results" ng-init="nofilms == false" ng-if="nofilms == true"><h1 class="wow shake">No Cigar :'-(</h1></div>
+           
+        </div>
+        <!-- LIBRARIES -->
+        <script src="js/jquery-2.2.1.min.js"></script>
+        <script src="vendor/jqueryui/jquery-ui.min.js"></script>
+        <script src="vendor/bootstrap.min.js"></script>
+        <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/angular-route/angular-route.min.js"></script>
+        <script src="vendor/wow/dist/wow.min.js"></script>
+        <script type="text/javascript">
+            new WOW().init();
+        </script>
+        <!-- SCRIPTS-->
+        <script src="js/app.js"></script>
+    </body>
+</html>

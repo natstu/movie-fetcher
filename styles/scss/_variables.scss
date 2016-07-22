@@ -1,0 +1,78 @@
+//BREAKPOINTS
+$screenXS: 480px;
+$screenS: 768px;
+$screenM: 992px;
+$screenL: 1200px;
+
+/*FONTS*/
+
+@font-face {
+    font-family: 'WalsheimBold';
+    src: url('../../fonts/GT-Walsheim-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GT-Walsheim-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/GT-Walsheim-Bold.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/GT-Walsheim-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/GT-Walsheim-Bold.svg') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'WalsheimLight';
+    src: url('../../fonts/GT-Walsheim-Light.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/GT-Walsheim-Light?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/GT-Walsheim-Light.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/GT-Walsheim-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/GT-Walsheim-Light.svg') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'WalsheimMedium';
+    src: url('../../fonts/gt-walsheim-medium-web.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/gt-walsheim-medium-web?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/gt-walsheim-medium-web.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/gt-walsheim-medium-web.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/gt-walsheim-medium-web.svg') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'WalsheimLight-Oblique';
+    src: url('../../fonts/GT-Walsheim-Light-Oblique.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+
+/* HEIGHTS/SIZES*/
+
+$header_height: 400px;
+$logo_size: 50px;
+$large_header: 40px;
+
+/*COLOURS*/
+
+/*theme colours*/
+
+$theme_color: #01d2bd;
+$dark_background: #121c25;
+$light_color: #ffffff;
+
+/*text colours*/
+
+$primary_font_color: #3f4b56;
+$light_text: #aebac8;
+$title_color: #3f4b56;
+$category_series: #ed164f;
+$category_movies: #009ddc;
+$sub_title: #aebac8;
+$darker_theme: #019a8b;
+$border_color: #edf0f5;
+
+/* PADDINGS */
+
+$main_padding: 40px;
+$sub_padding: 30px;
+$box_padding: 18px;
+$zero: 0px;
+
+/*MARGINS*/
+
+$no_gap: 0px;
+$med_gap: 20px;
+$large_gap: 50px;
+$primary_right: 10px;
+
+

@@ -1,0 +1,152 @@
+@import '../variables';
+@import '../mixins';
+
+.results_wrapper, .no-results {
+  background-color: $theme_color;
+  padding: $main_padding;
+  height: 100%;
+}
+
+.no-results {
+  text-align: center;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  h1 {
+    color: $light_color;
+    font-family: 'WalsheimLight', sans-serif;
+    font-size: $large_header;
+  }
+}
+
+.title.results {
+  font-size: 25px;
+  color: $light_color;
+  font-family: 'WalsheimLight';    
+}
+
+.results_head {
+  @include space-justify;
+  margin-bottom: $large_gap;
+}
+
+.sort-group {
+  .btn-group {
+    label {
+     @include func_btn; 
+     @include titles; 
+      
+    }
+  } 
+}
+
+.sort-group {
+  span {
+    @include func_btn; 
+    @include titles;
+    border: none;
+    background-color: transparent;
+    color: $light_color;  
+  }
+} 
+
+.active {
+  background-color: $darker_theme!important;
+  color: $light_color!important;
+}
+
+.film-list {
+  padding-left: $sub_padding;
+}
+
+.film-item {
+  list-style: none;
+  padding: 0px 40px 0px 0px;
+  margin-bottom: $large_gap;
+}
+
+.film-box {
+  height: 250px;
+  list-style: none;
+  background: $light_color;
+  padding: $box_padding;
+  @media screen and (max-width: $screenS) {
+    height: 170px;
+  }
+  &:hover {
+    cursor:pointer;
+  }
+}
+
+.film-box .col-sm-4 {
+  padding-left: $zero;
+  img {
+    @include good_image;
+    border: 1px solid #ddd;
+  }
+}
+
+.type {
+  @include titles;
+  @include align-row;
+  font-family: 'WalsheimBold';
+  i {
+    @include type-style;
+  }
+}
+
+.film-name {
+  @include film-title;
+  @media screen and (max-width: $screenS) {
+   font-size: 13px;
+  }
+}
+
+.year {
+  @include titles;
+  font-family: 'WalsheimBold';
+  padding-top: $med_gap;
+  color: $sub_title;
+}
+
+.series {
+  color: $category_series;
+}
+
+.movie {
+  color: $category_movies;
+}
+
+#custom-search-input.myFocus {  
+  border-color: rgb(1, 210, 189) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 13px rgb(1, 210, 189) !important;
+  outline: 0 none;
+}  
+#custom-search-input.myBlur {  
+  border-color: none;
+  box-shadow: none!important;
+  outline: 0 none;  
+}
+
+.col-xs-12 {
+  @media (min-width:438px) and (max-width: 767px) {
+    width: 50%
+  }
+}
+
+.fa-times {
+  position: absolute;
+  font-size: 30px;
+  right: 50px;
+}
+
+// behavior classes
+
+.enlarge {
+  width: 100%;
+}
+
+.enheight {
+  height: 100%;
+}
+
+    
