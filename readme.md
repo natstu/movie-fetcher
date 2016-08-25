@@ -1,4 +1,4 @@
-A prototype of an application that let the user search for a movie and get some information about it. 
+A prototype of an application that lets the user search for a movie and get some information about it. 
 
 Methods and workflow:
 - Angular, Gulp/node modules
